@@ -1,0 +1,184 @@
+:root {
+  --color-lightest: #2b2b2b; /* Dark background */
+  --color-light: #3c3c3c;    /* Slightly lighter shade for contrast */
+  --color-medium: #ff922b;   /* Accent color */
+  --color-dark: #ffa94d;     /* Brighter accent color */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #1c1c1c; /* Darker background for body */
+  color: #f1f1f1; /* Light text color for better readability */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_app {
+  display: flex;
+  flex-direction: column;
+}
+
+.Title {
+  font-size: 3rem;
+  text-align: center;
+  color: #ffa94d; /* Brighter accent color */
+  margin-bottom: 3rem;
+}
+
+.app {
+  min-height: 66vh;
+  display: grid;
+  grid-template-columns: 34rem 44rem;
+  column-gap: 4rem;
+  align-items: start;
+}
+
+.button {
+  background-color: var(--color-medium);
+  color: #1c1c1c;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: var(--color-dark);
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.sidebar li {
+  display: grid;
+  grid-template-columns: 4.8rem 1fr auto;
+  align-items: center;
+  column-gap: 1.6rem;
+  padding: 1.2rem;
+  border-radius: 7px;
+  background-color: var(--color-light); /* Dark background for sidebar items */
+  color: #f1f1f1; /* Light text color */
+  transition: 0.5s;
+}
+
+.selected,
+.sidebar li:hover {
+  background-color: var(--color-lightest); /* Slightly darker background */
+}
+
+.sidebar li img {
+  border-radius: 50%;
+  width: 100%;
+  grid-row: span 2;
+}
+
+.sidebar li h3 {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.sidebar li p {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.sidebar li .button {
+  grid-row: span 2;
+  grid-column: 3;
+}
+
+.sidebar > .button {
+  float: right;
+  margin-right: 1.2rem;
+}
+
+.green {
+  color: #66a80f;
+}
+
+.red {
+  color: #e03131;
+}
+
+form {
+  font-size: 1.6rem;
+  display: grid;
+  align-items: center;
+  gap: 1.2rem;
+  background-color: var(--color-light); /* Form background */
+  border-radius: 7px;
+  color: #f1f1f1; /* Light text color */
+}
+
+.form-add-friend {
+  grid-template-columns: 1fr 1.5fr;
+  margin-bottom: 1.6rem;
+  padding: 1.2rem;
+}
+
+.form-split-bill {
+  grid-template-columns: 1fr 12rem;
+  padding: 3.2rem 4rem;
+}
+
+label {
+  font-weight: 500;
+  color: #f1f1f1; /* Light label color */
+}
+
+input,
+select {
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  text-align: center;
+  background-color: #3c3c3c; /* Dark input background */
+  border: 1px solid var(--color-light);
+  border-radius: 4px;
+  transition: 0.3s;
+  color: #f1f1f1; /* Light text inside input fields */
+  outline: 2px solid var(--color-medium); /* Add an outline to input boxes */
+}
+
+input:focus,
+select:focus {
+  outline: 3px solid var(--color-dark); /* Change the outline color and thickness on focus */
+  border: 1px solid var(--color-dark);
+}
+
+
+form .button {
+  margin-top: 0.6rem;
+  grid-column: 2;
+}
+
+form h2 {
+  grid-column: 1 / -1;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin-bottom: 1.6rem;
+  color: #ffa94d; /* Accent color for headings */
+}
